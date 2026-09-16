@@ -850,19 +850,21 @@
         line-height: var(--leading-tight); color: var(--ay-text); }
       .slide[data-chapter="cobertura"] .cob-cell { height: 78px; border-top: 1px solid var(--ay-bg-subtle);
         border-left: 1px solid var(--ay-bg-subtle); display: flex; align-items: center; justify-content: center; }
-      .slide[data-chapter="cobertura"] .cob-cell.on { background: rgba(var(--blue-primary-rgb), .05); }
       .slide[data-chapter="cobertura"] .cob-dot { width: 26px; height: 26px; border-radius: 50%;
-        background: var(--gradient-brand-horizontal); display: flex; align-items: center; justify-content: center; }
-      .slide[data-chapter="cobertura"] .cob-dot svg { width: 13px; height: 13px; color: var(--bg-white); stroke-width: 3; }
-      .slide[data-chapter="cobertura"] .cob-none { width: 14px; height: 2px; border-radius: 2px; background: var(--ay-bg-subtle); }
-      .slide[data-chapter="cobertura"] .cob-soon { width: 26px; height: 26px; border-radius: 50%;
-        border: 2px solid rgba(var(--blue-primary-rgb), .35); background: var(--bg-white); }
+        background: var(--gradient-green-end); display: flex; align-items: center; justify-content: center; }
+      .slide[data-chapter="cobertura"] .cob-dot svg,
+      .slide[data-chapter="cobertura"] .cob-soon svg { width: 13px; height: 13px; color: var(--bg-white); stroke-width: 3; }
+      .slide[data-chapter="cobertura"] .cob-none { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ay-bg-subtle); }
+      .slide[data-chapter="cobertura"] .cob-soon { width: 26px; height: 26px; border-radius: 50%; background: var(--ay-primary);
+        display: flex; align-items: center; justify-content: center; }
       .slide[data-chapter="cobertura"] .cob-legend { display: flex; align-items: center; justify-content: center;
         gap: var(--space-26); margin-top: var(--space-18); font-size: var(--font-12); color: var(--ay-gray); }
       .slide[data-chapter="cobertura"] .cob-legend span { display: flex; align-items: center; gap: var(--space-8); }
       .slide[data-chapter="cobertura"] .cob-legend .cob-dot,
-      .slide[data-chapter="cobertura"] .cob-legend .cob-soon { width: 18px; height: 18px; border-width: 2px; }
-      .slide[data-chapter="cobertura"] .cob-legend .cob-dot svg { width: 9px; height: 9px; }
+      .slide[data-chapter="cobertura"] .cob-legend .cob-soon,
+      .slide[data-chapter="cobertura"] .cob-legend .cob-none { width: 18px; height: 18px; border-width: 2px; }
+      .slide[data-chapter="cobertura"] .cob-legend .cob-dot svg,
+      .slide[data-chapter="cobertura"] .cob-legend .cob-soon svg { width: 9px; height: 9px; }
     </style>
     <div class="slide-inner">
       <h1 class="slide-title">Our HR services, country by country</h1>
@@ -876,70 +878,70 @@
         </div>
         <div class="cob-head">
           <span class="cob-flag"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.5" y="0" fill="#AA151B"></rect><rect width="3" height="1" y="0.5" fill="#F1BF00"></rect><rect width="3" height="0.5" y="1.5" fill="#AA151B"></rect></svg></span>
-          <b>SPAIN</b><i>3 services</i>
+          <b>SPAIN</b><i>5 services</i>
         </div>
         <div class="cob-head">
           <span class="cob-flag"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#FF0000"></rect><rect width="1.2" height="2" fill="#006600"></rect><circle cx="1.2" cy="1" r="0.36" fill="#FFD700" stroke="#ffffff" stroke-width="0.06"></circle></svg></span>
-          <b>PORTUGAL</b><i>2 services</i>
+          <b>PORTUGAL</b><i>3 services</i>
         </div>
         <div class="cob-head">
           <span class="cob-flag"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" y="0" fill="#1a1a1a"></rect><rect width="3" height="0.667" y="0.667" fill="#DD0000"></rect><rect width="3" height="0.666" y="1.334" fill="#FFCE00"></rect></svg></span>
-          <b>GERMANY</b><i>2 services</i>
+          <b>GERMANY</b><i>3 services</i>
         </div>
         <div class="cob-head">
           <span class="cob-flag"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="1" height="2" x="0" fill="#009246"></rect><rect width="1" height="2" x="1" fill="#ffffff"></rect><rect width="1" height="2" x="2" fill="#CE2B37"></rect></svg></span>
-          <b>ITALY</b><i>2 services</i>
+          <b>ITALY</b><i>4 services</i>
         </div>
         <div class="cob-head">
           <span class="cob-flag"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="1" height="2" x="0" fill="#1a1a1a"></rect><rect width="1" height="2" x="1" fill="#FDDA24"></rect><rect width="1" height="2" x="2" fill="#EF3340"></rect></svg></span>
-          <b>BELGIUM</b><i>1 service</i>
+          <b>BELGIUM</b><i>3 services</i>
         </div>
 
         <div class="cob-label"><span class="cob-ic"><i data-lucide="shield-alert"></i></span><strong>Risk prevention</strong></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
 
         <div class="cob-label"><span class="cob-ic"><i data-lucide="hard-hat"></i></span><strong>Occupational injuries and diseases</strong></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
 
         <div class="cob-label"><span class="cob-ic"><i data-lucide="euro"></i></span><strong>HR costs and contributions</strong></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
         <div class="cob-cell"><span class="cob-none"></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
 
         <div class="cob-label"><span class="cob-ic"><i data-lucide="landmark"></i></span><strong>HR grants</strong></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
 
         <div class="cob-label"><span class="cob-ic"><i data-lucide="calendar-clock"></i></span><strong>Occupational sick leave</strong></div>
-        <div class="cob-cell on"><span class="cob-dot"><i data-lucide="check"></i></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
-        <div class="cob-cell"><span class="cob-soon"></span></div>
+        <div class="cob-cell"><span class="cob-dot"><i data-lucide="check"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
+        <div class="cob-cell"><span class="cob-soon"><i data-lucide="plus"></i></span></div>
       </div>
 
       <div class="cob-legend">
         <span><span class="cob-dot"><i data-lucide="check"></i></span> Available</span>
-        <span><span class="cob-soon"></span> On demand</span>
-        <span><span class="cob-none"></span> Not yet</span>
+        <span><span class="cob-soon"><i data-lucide="plus"></i></span> On demand</span>
+        <span><span class="cob-none"></span> No activity in this country yet</span>
       </div>
     </div>
     <div class="company-logo"><img src="https://ayming-france.github.io/assets/logos/ayming-logo.png" alt="Ayming"></div>
