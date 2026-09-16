@@ -820,8 +820,11 @@
 
 <section class="slide" data-chapter="cobertura">
     <style>
-      .slide[data-chapter="cobertura"] .content-paragraph { max-width: 820px; margin: 0 auto; text-align: center; }
-      .slide[data-chapter="cobertura"] .cob-matrix { display: grid; grid-template-columns: 320px repeat(6, 1fr);
+      /* .slide-inner est une colonne flex centree : sans width 100% la grille se reduit a
+         son contenu et la slide parait etriquee. On elargit aussi le cadre pour ce chapitre. */
+      .slide[data-chapter="cobertura"] .slide-inner { max-width: 1340px; }
+      .slide[data-chapter="cobertura"] .content-paragraph { max-width: 880px; margin: 0 auto; text-align: center; }
+      .slide[data-chapter="cobertura"] .cob-matrix { width: 100%; display: grid; grid-template-columns: 360px repeat(6, 1fr);
         border: 1px solid var(--ay-bg-subtle); border-radius: var(--radius-xl); overflow: hidden;
         margin-top: var(--space-26); }
       .slide[data-chapter="cobertura"] .cob-corner { background: var(--ay-bg-light); display: flex; align-items: flex-end;
@@ -1156,27 +1159,5 @@
   <script src="https://ayming-france.github.io/assets/engine/slides.js"></script>
   <script src="https://ayming-france.github.io/assets/engine/lucide.min.js"></script>
   <script>lucide.createIcons();</script>
-
-  <!-- Le moteur partage ecrit sa propre chrome en francais, sans crochet de langue :
-       bandeau de confidentialite, rappels clavier. Correctif local le temps que le
-       mecanisme de langue arrive dans le moteur, voir ROADMAP.md workstream 5.
-       Le point median passe par fromCharCode pour ne dependre d'aucun echappement. -->
-  <script>
-    (function localiseChrome() {
-      var DOT = ' ' + String.fromCharCode(183) + ' ';
-      function apply() {
-        var b = document.querySelector('.banner-confidential');
-        if (b) b.textContent = 'CONFIDENTIAL' + DOT + 'Document the exclusive property of Ayming';
-        var h = document.querySelector('.keyboard-hint');
-        if (h) h.innerHTML = '<span>&#8592; &#8594; navigate</span><span>F fullscreen</span>'
-          + '<span>T tools</span><span>P share</span>';
-      }
-      apply();
-      // le moteur rend sa chrome apres nous : on repasse quelques fois puis on arrete.
-      var n = 0, id = setInterval(function () { apply(); if (++n > 20) clearInterval(id); }, 150);
-      document.addEventListener('DOMContentLoaded', apply);
-      window.addEventListener('load', apply);
-    })();
-  </script>
 </body>
 </html>
